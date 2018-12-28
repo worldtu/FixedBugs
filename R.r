@@ -38,4 +38,22 @@ map.df <- map.df[order(map.df$order),]
 ggplot(map.df, aes(x=long,y=lat,group=group))+
   geom_polygon(aes(fill=mean),colour="grey")+
   scale_fill_gradient(low="#FFCC66",high="#FF9900",na.value="grey90")
-  # coord_map("polyconic") # make the plot can be shown in a ball shape
+# coord_map("polyconic") # make the plot can be shown in a ball shape
+
+  
+# 2.
+# the lables on the x-axis is shown in the order of alphabet, but I want it in my order.
+# Solution: add "level" option in ggplot function
+
+levels = c('Left school before 16 years', 'Left school at 16 years', 
+           'Left school at 17 years', 'Left school at 18 years', 
+           'Some college or university, no certificate or degree', 
+           'Professional certificate/ diploma', 'University degree', 
+           'Masters degree', 'Doctorate degree')
+  
+# plot
+ggplot(data=drug.edu, aes(x = factor(
+  Education, level = levels), y=mean, group=1)) +
+  geom_line(colour=col3)+
+  geom_point(colour=col4)+
+  theme_minimal()
