@@ -1,8 +1,7 @@
-## 1.
-### When you want to draw a heatmap-map, but there exists some strange lines after merging datasets.
-### Solution: sort the merged data with "order" in map data.
+# 1.
+# When you want to draw a heatmap-map, but there exists some strange lines after merging datasets.
+# Solution: sort the merged data with "order" in map data.
 
-```{r}
 # change the names of countries in original dataset
 for(i in 1:1885){
   if(x$Country[i]==-0.09765){x$Country[i]="Australia"
@@ -40,4 +39,3 @@ ggplot(map.df, aes(x=long,y=lat,group=group))+
   geom_polygon(aes(fill=mean),colour="grey")+
   scale_fill_gradient(low="#FFCC66",high="#FF9900",na.value="grey90")
   # coord_map("polyconic") # make the plot can be shown in a ball shape
-```
