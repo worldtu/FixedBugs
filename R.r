@@ -57,3 +57,15 @@ ggplot(data=drug.edu, aes(x = factor(
   geom_line(colour=col3)+
   geom_point(colour=col4)+
   theme_minimal()
+
+
+# 3.
+# Some colours I favourite in ggplot
+  
+plot(Music~year,type="l",lty=1,data = yeartable)
+lines(ShortFilm~year,type="l",col="steelblue",lty=2,data = yeartable)
+lines(Documentary~year,type="l",col="chartreuse4",lty=3,data = yeartable)
+lines(Theatre~year,type="l",col="chocolate",lty=4,data = yeartable)
+legend("topleft",cex=.6,c("Music","ShortFilm","Documentary","Theatre"),
+       col=c("black","steelblue","chartreuse4","chocolate"),lty=1:6)
+  
