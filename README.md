@@ -1,2 +1,2 @@
-# FixedBugs
-All the solutions of bugs met in Python and R.
+# MessFixed
+Solutions of mess I met in $Python$ and $R$.
