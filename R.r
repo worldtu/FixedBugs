@@ -69,3 +69,11 @@ lines(Theatre~year,type="l",col="chocolate",lty=4,data = yeartable)
 legend("topleft",cex=.6,c("Music","ShortFilm","Documentary","Theatre"),
        col=c("black","steelblue","chartreuse4","chocolate"),lty=1:6)
   
+
+# 4.
+# When you want to grid some plots, but their variable names are messed together.
+# Solution: use option "rremove("x.text")" in "ggarrange" to the specific plot you want to remove.
+  
+ggarrange(p1, p2, p3+rremove("x.text"), p4+rremove("x.text"), p5, p6,
+          # labels = c("A", "B", "C"),
+          ncol = 3, nrow = 2)
